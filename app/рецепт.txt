@@ -1,0 +1,47 @@
+Часть 1
+=======
+Подготовил фронт-энд часть :
+resources/views/test.blade.php
+resources/saas/_test.scss
+resources/saas/test.js
+
+В webpack.mix.js прописал путь к test.js
+
+Установил node_modules
+$ npm install
+
+Запустил
+$ npm run watch
+$ php artisan serve
+
+
+Часть 2
+=======
+JS получает данные из Laravel.
+
+Пусть данные из Laravel в JS будет передавать специальный контроллер TestController@getFromLaravel().
+Создали контроллер TestController.php и в нём метод getFromLaravel().
+
+JS будет обращаться к контроллеру TestController@getFromLaravel() не напрямую, а через axios.
+Axios же будет "стучаться" в routes/api.php.
+
+Итак : ( JS => axios ) => ( routes/api.php => TestController@getFromLaravel )
+
+Для этого, в routes/api.php прописываем :
+Route::post('/test', 'TestController@getFromLaravel');
+
+
+Часть 3
+=======
+JS передаёт в Laravel переменную с данными, например возраст, Laravel обрабатывает эти данные и передаёт результат обратно в JS.
+
+См. код :
+routes/web.php
+routes/api.php
+Http/Controllers/TestController@test
+Http/Controllers/TestController@getFromLaravel
+Http/Controllers/TestController@getAgeFromLaravel
+resources/js/test.js
+
+
+

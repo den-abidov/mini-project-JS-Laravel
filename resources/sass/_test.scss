@@ -1,0 +1,34 @@
+#page-date
+{
+  text-align: center;
+  margin-top:20px;
+}
+h3, h4
+{
+  text-align:center;
+  margin:20px auto;
+}
+
+form
+{
+  max-width:300px;
+  margin:auto;
+
+  .red-border
+  {
+    border:1px solid red;
+    color:red;
+  }
+
+  #button-div
+  {
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align: center;
+  }
+
+  .alert-info, .alert-danger, .alert-success
+  {
+    display: none;
+  }
+}
