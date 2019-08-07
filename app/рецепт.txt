@@ -42,6 +42,16 @@ Http/Controllers/TestController@test
 Http/Controllers/TestController@getFromLaravel
 Http/Controllers/TestController@getAgeFromLaravel
 resources/js/test.js
+webpack.mix.js
 
 
+Часть 4
+=======
+Мини-приложение с передачей данных из JS в Laravel.
+См. код :
+routes/api.php
+Http/Controllers/TestController@checkIfAgeLegal
+resources/js/checkAge.js
+webpack.mix.js
 
+Работает только в Mozilla Firefox и почему-то не работает в Google Chrome.

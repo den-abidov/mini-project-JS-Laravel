@@ -27,4 +27,21 @@ class TestController extends Controller
         $answer = "Laravel : Если тебе сейчас {$ageNow}, то в следующем году тебе будет {$ageThen}.";
         return $answer;
     }
+
+     // Часть 4
+     public function checkIfAgeLegal(Request $request)
+     {
+        //dd("Зашёл в TestController@checkIfAgeLegal");
+
+        $ageNow = $request->age;
+
+        $verdict = "рано";
+
+        if($ageNow >= 21)
+        {
+           $verdict = "можно";
+        }
+
+        return $verdict;
+     }
 }

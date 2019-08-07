@@ -23,3 +23,6 @@ Route::post('/test', 'TestController@getFromLaravel');
 
 // Часть 3
 Route::post('/askAge', 'TestController@getAgeFromLaravel');
+
+// Часть 4 - мини-проект
+Route::post('/checkAgeStatus', 'TestController@checkIfAgeLegal');
